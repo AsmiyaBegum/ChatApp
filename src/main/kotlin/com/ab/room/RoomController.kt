@@ -23,7 +23,7 @@ class RoomController (
         }
 
         members[userName] = Member(
-            userName = userName,
+            username = userName,
             sessionId = sessionId,
             socket = socket
         )
@@ -34,7 +34,7 @@ class RoomController (
         members.values.forEach { member ->
             val messageEntity = Message(
                 text = message,
-                userName = senderUserName,
+                username = senderUserName,
                 timestamp = System.currentTimeMillis()
             )
 
